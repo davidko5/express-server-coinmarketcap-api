@@ -1,6 +1,9 @@
 {
   "name": "server-api",
   "version": "1.0.0",
+  "enginges": {
+    "node": ">=12.22.9"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
