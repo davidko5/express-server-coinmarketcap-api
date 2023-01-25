@@ -57,9 +57,9 @@ app.get('/', (req, res) => {
     let response = null;
     new Promise(async (resolve, reject) => {
         try {
-            response = await axios.get('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=BTC,ETH,ADA&convert=USD', {
+            response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=BTC,ETH,ADA&convert=USD', {
             headers: {
-                'X-CMC_PRO_API_KEY': 'PUT YOUR API KEY HERE',
+                'X-CMC_PRO_API_KEY': '472d9cbc-d6af-49e0-aa00-aa18e69670d0',
             },
             });
         } catch(ex) {
