@@ -51,7 +51,7 @@ app.get('/events/:id', (req, res) => {
     res.send(event);
 });
 
-app.get('/', (req, res) => {
+app.get('/price-change', (req, res) => {
     const axios = require('axios');
 
     let response = null;
