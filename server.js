@@ -51,7 +51,7 @@ app.get('/events/:id', (req, res) => {
     res.send(event);
 });
 
-app.get('/price-change', (req, res) => {
+app.get('/price-change', (req, res) => { //request for prices and changes of some currencies
     const axios = require('axios');
 
     let response = null;
@@ -79,13 +79,13 @@ app.get('/price-change', (req, res) => {
     });
     
 });
-app.get('/historicals', (req, res) => {
-  const axios = require('axios');
+app.get('/historicals', (req, res) => {//request for historical data of some currencies
+  const axios = require('axios');      // but with sandbox/testing apikey cause it is not free 
 
   let response = null;
   new Promise(async (resolve, reject) => {
       try {
-          response = await axios.get('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/quotes/historical?symbol=BTC,ETH,ADA&convert=USD', {
+          response = await axios.get('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/quotes/historical?symbol=BTC,ETH,ADA,XRP&convert=USD', {
           headers: {
               'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c',
           },
